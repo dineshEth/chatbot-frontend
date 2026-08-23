@@ -2,11 +2,13 @@
 
 /* Custom Theme Variables */
 :root {
-  /* Light mode colors */
-  --color-primary: #6366f1;
-  --color-primary-light: #818cf8;
-  --color-secondary: #ec4899;
+  /* Light mode colors - Blue/Pink Theme */
+  --color-primary: #3874FF;
+  --color-primary-light: #60a5fa;
+  --color-primary-dark: #2563eb;
+  --color-secondary: #FFADEE;
   --color-secondary-light: #f472b6;
+  --color-secondary-dark: #ec4899;
   --color-background: #f8fafc;
   --color-surface: #ffffff;
   --color-foreground: #1e293b;
@@ -14,67 +16,73 @@
   --color-border: #e2e8f0;
   
   /* Chat bubble colors */
-  --color-user-bubble: #6366f1;
+  --color-user-bubble: #3874FF;
   --color-user-text: #ffffff;
-  --color-assistant-bubble: #f1f5f9;
+  --color-assistant-bubble: #FFADEE;
   --color-assistant-text: #1e293b;
   
   /* Gradient colors */
-  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
-  --gradient-secondary: linear-gradient(135deg, #818cf8 0%, #f472b6 100%);
+  --gradient-primary: linear-gradient(135deg, #3874FF 0%, #FFADEE 100%);
+  --gradient-secondary: linear-gradient(135deg, #60a5fa 0%, #FFADEE 100%);
 }
 
-/* Dark mode colors */
+/* Dark mode colors - Blue/Pink Theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-primary: #818cf8;
+    --color-primary: #60a5fa;
     --color-primary-light: #93c5fd;
-    --color-secondary: #f472b6;
+    --color-primary-dark: #FF4081;
+    --color-secondary: #FF4081;
     --color-secondary-light: #f8b4cb;
-    --color-background: #0f172a;
+    --color-secondary-dark: #ec4899;
+    --color-background: #111844;
     --color-surface: #1e293b;
     --color-foreground: #f1f5f9;
-    --color-muted: #64748b;
+    --color-muted: #94a3b8;
     --color-border: #334155;
     
     /* Chat bubble colors - dark mode */
-    --color-user-bubble: #6366f1;
+    --color-user-bubble: #FF4081;
     --color-user-text: #ffffff;
-    --color-assistant-bubble: #1e293b;
+    --color-assistant-bubble: #111844;
     --color-assistant-text: #f1f5f9;
   }
 }
 
 /* Theme classes for manual toggle */
 .light {
-  --color-primary: #6366f1;
-  --color-primary-light: #818cf8;
-  --color-secondary: #ec4899;
+  --color-primary: #3874FF;
+  --color-primary-light: #60a5fa;
+  --color-primary-dark: #2563eb;
+  --color-secondary: #FFADEE;
   --color-secondary-light: #f472b6;
+  --color-secondary-dark: #ec4899;
   --color-background: #f8fafc;
   --color-surface: #ffffff;
   --color-foreground: #1e293b;
   --color-muted: #94a3b8;
   --color-border: #e2e8f0;
-  --color-user-bubble: #6366f1;
+  --color-user-bubble: #3874FF;
   --color-user-text: #ffffff;
-  --color-assistant-bubble: #f1f5f9;
+  --color-assistant-bubble: #FFADEE;
   --color-assistant-text: #1e293b;
 }
 
 .dark {
-  --color-primary: #818cf8;
+  --color-primary: #60a5fa;
   --color-primary-light: #93c5fd;
-  --color-secondary: #f472b6;
+  --color-primary-dark: #FF4081;
+  --color-secondary: #FF4081;
   --color-secondary-light: #f8b4cb;
-  --color-background: #0f172a;
+  --color-secondary-dark: #ec4899;
+  --color-background: #111844;
   --color-surface: #1e293b;
   --color-foreground: #f1f5f9;
-  --color-muted: #64748b;
+  --color-muted: #94a3b8;
   --color-border: #334155;
-  --color-user-bubble: #6366f1;
+  --color-user-bubble: #FF4081;
   --color-user-text: #ffffff;
-  --color-assistant-bubble: #1e293b;
+  --color-assistant-bubble: #111844;
   --color-assistant-text: #f1f5f9;
 }
 
