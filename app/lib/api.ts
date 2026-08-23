@@ -1,6 +1,6 @@
 'use client';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://node-backend-deploy-xmwo.onrender.com';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://node-backend-deploy-vue3.onrender.com';
 
 interface ChatbotRequest {
   prompt: string;

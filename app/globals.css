@@ -3,23 +3,89 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --primary: #0D530E;
+  --primary-light: #306D29;
+  --accent: #E7E1B1;
+  --background: #FBF5DD;
+  --foreground: #0D530E;
 }
 
 [data-theme="dark"] {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 0, 0, 0;
+  --primary: #FBF5DD;
+  --primary-light: #E7E1B1;
+  --accent: #306D29;
+  --background: #0D530E;
+  --foreground: #FBF5DD;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  transition: color 0.2s ease, background 0.2s ease;
+  color: var(--foreground);
+  background: var(--background);
+  transition: color 0.3s ease, background 0.3s ease;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .bg-primary-light {
+    background-color: var(--primary-light);
+  }
+  .bg-accent {
+    background-color: var(--accent);
+  }
+  .text-primary {
+    color: var(--primary);
+  }
+  .text-accent {
+    color: var(--accent);
+  }
+  .border-primary {
+    border-color: var(--primary);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

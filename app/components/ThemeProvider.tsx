@@ -33,6 +33,21 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
       // Update data-theme attribute on html element
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
+      // Update CSS variables for smooth transition
+      const root = document.documentElement;
+      if (theme === 'dark') {
+        root.style.setProperty('--primary', '#FBF5DD');
+        root.style.setProperty('--primary-light', '#E7E1B1');
+        root.style.setProperty('--accent', '#306D29');
+        root.style.setProperty('--background', '#0D530E');
+        root.style.setProperty('--foreground', '#FBF5DD');
+      } else {
+        root.style.setProperty('--primary', '#0D530E');
+        root.style.setProperty('--primary-light', '#306D29');
+        root.style.setProperty('--accent', '#E7E1B1');
+        root.style.setProperty('--background', '#FBF5DD');
+        root.style.setProperty('--foreground', '#0D530E');
+      }
     }
   }, [theme, mounted]);
 
