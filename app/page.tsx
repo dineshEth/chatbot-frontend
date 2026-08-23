@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { sendMessage } from '@/lib/api';
+import { sendMessage } from './lib/api';
 
 export default function Home() {
   const [messages, setMessages] = useState<Array<{ role: string; content: string }>>([]);
